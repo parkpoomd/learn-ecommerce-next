@@ -20,12 +20,16 @@
   @apply bg-cyan;
 }
 
+.productImage {
+  @apply transition-transform duration-500 block;
+}
+
 .productBg {
   @apply absolute inset-0 z-0;
   background-color: #212529;
 }
 .productBg::before {
-  @apply block w-full h-full bg-repeat-space;
+  @apply transition-transform duration-500 block w-full h-full bg-repeat-space;
   content: '';
   background-image: url('/product-pattern-bg.svg');
 }
@@ -43,11 +47,11 @@
   line-height: 2.2em;
 }
 .productTitle span {
-  @apply py-4 px-6;
+  @apply py-4 px-6 bg-primary;
   box-decoration-break: clone;
 }
 
 .productPrice {
-  @apply pb-4 pt-2 px-6 font-semibold text-sm;
+  @apply bg-primary pb-4 pt-2 px-6 font-semibold text-sm;
   letter-spacing: 0.4px;
 }
