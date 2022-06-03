@@ -10,3 +10,11 @@
     height: inherit;
   }
 }
+
+.layoutA {
+  color: red;
+}
+
+.layoutB {
+  color: blue;
+}
