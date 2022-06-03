@@ -1,11 +1,23 @@
 .root {
-  @apply relative;
+  @apply relative min-h-full;
+}
+.root:hover .productBg:before {
+  transform: scale(0.99);
+}
+.root:hover .productImage {
+  transform: scale(1.15);
 }
 .root:nth-child(6n + 1) .productBg {
   @apply bg-violet;
 }
 .root:nth-child(6n + 3) .productBg {
   @apply bg-pink;
+}
+.root:nth-child(6n + 5) .productBg {
+  @apply bg-blue;
+}
+.root:nth-child(6n + 6) .productBg {
+  @apply bg-cyan;
 }
 
 .productBg {
