@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import { Container } from '@components/ui';
+import Usernav from '../Usernav';
 import style from './Navbar.module.css';
 
 const Navbar: FC = () => {
@@ -25,6 +26,9 @@ const Navbar: FC = () => {
               <a className={style.link}>Shoes</a>
             </Link>
           </nav>
+          <div className="flex flex-1 justify-end space-x-8">
+            <Usernav />
+          </div>
         </div>
       </div>
     </Container>
