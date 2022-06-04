@@ -13,11 +13,10 @@
 
 .layoutA > *:nth-child(6n + 1),
 .layout > *:nth-child(6n + 5) {
-  /* 1, 7, 13 */
-  /* 5, 11, 17 */
   @apply lg:col-span-2 lg:row-span-2;
 }
 
-.layoutB {
-  color: blue;
+.layoutB > *:nth-child(6n + 2),
+.layout > *:nth-child(6n + 4) {
+  @apply lg:col-span-2 lg:row-span-2;
 }
