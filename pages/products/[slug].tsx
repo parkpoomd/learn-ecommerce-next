@@ -1,4 +1,5 @@
 import { Layout } from '@components/common';
+import { Container } from '@components/ui';
 import { getConfig } from '@framework/api/config';
 import { getAllProductsPaths, getProduct } from '@framework/product';
 import {
@@ -41,13 +42,9 @@ export default function ProductSlug({
   product,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div>
-      <p>{product?.name}</p>
-      <p>{product?.slug}</p>
-      <p>{product?.path}</p>
-      <p>{product?.price.value}</p>
-      <p>{product?.price.currencyCode}</p>
-    </div>
+    <Container>
+      <p>id: {product?.id}</p>
+    </Container>
   );
 }
 
