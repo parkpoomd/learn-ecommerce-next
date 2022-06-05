@@ -1,5 +1,5 @@
-import cn from 'classnames';
 import { FC } from 'react';
+import cn from 'classnames';
 import s from './ProductView.module.css';
 import { Container } from '@components/ui';
 import Image from 'next/image';
