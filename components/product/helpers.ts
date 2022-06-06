@@ -8,8 +8,18 @@ export type Choices = {
 
 export function getVariant(product: Product, choices: Choices) {
   const variant = product.variants.find((variant) => {
-    console.log(variant);
-    return false;
+    const isMatchingChoice = variant.options.every((variantOption) => {
+      const optionName = variantOption.displayName.toLowerCase();
+      if (optionName in choices) {
+        if (choices[optionName] === variantOption.values[0].label) {
+          return true;
+        }
+      }
+
+      return false;
+    });
+
+    return isMatchingChoice;
   });
 
   return variant;
