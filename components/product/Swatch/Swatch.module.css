@@ -13,12 +13,12 @@
 .color {
   @apply text-black transition duration-150 ease-in-out hover:text-black;
 }
-.color .dark,
-.color .dark:hover {
+.color.dark,
+.color.dark:hover {
   color: white !important;
 }
 
-.active .size,
-.active .color {
+.active.size,
+.active.color {
   @apply border-accents-9 border-2;
 }
