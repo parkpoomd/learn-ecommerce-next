@@ -13,11 +13,7 @@ interface ShopifyApiProviderProps {
 }
 
 export const ApiProvider = ({ children }: ShopifyApiProviderProps) => {
-  return (
-    <CoreApiProvider config={{ ...config, testKey: 'testValue' }}>
-      {children}
-    </CoreApiProvider>
-  );
+  return <CoreApiProvider config={{ ...config }}>{children}</CoreApiProvider>;
 };
 
 export const useApiProvider = () => useCoreApiProvider();
